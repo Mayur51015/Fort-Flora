@@ -4,6 +4,10 @@ import { renderForts } from './pages/forts.js';
 import { renderFlora } from './pages/flora.js';
 import { renderAdviser } from './pages/adviser.js';
 import { renderAdmin } from './pages/admin.js';
+import { renderMap } from './pages/map.js';
+import { renderDashboard } from './pages/dashboard.js';
+import { renderAuthPage } from './pages/auth-page.js';
+import { renderFavorites } from './pages/favorites.js';
 
 const routes = {
     '/': renderHome,
@@ -11,6 +15,10 @@ const routes = {
     '/flora': renderFlora,
     '/adviser': renderAdviser,
     '/admin': renderAdmin,
+    '/map': renderMap,
+    '/dashboard': renderDashboard,
+    '/auth': renderAuthPage,
+    '/favorites': renderFavorites,
 };
 
 function getPath() {

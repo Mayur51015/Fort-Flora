@@ -10,6 +10,8 @@ export const forts = [
         height: 820,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=600&q=80',
+        latitude: 18.2348,
+        longitude: 73.4473,
     },
     {
         id: 2,
@@ -19,6 +21,8 @@ export const forts = [
         height: 1080,
         best_time: 'September – March',
         image_url: 'https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?w=600&q=80',
+        latitude: 17.9317,
+        longitude: 73.5803,
     },
     {
         id: 3,
@@ -28,6 +32,8 @@ export const forts = [
         height: 1312,
         best_time: 'June – February',
         image_url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+        latitude: 18.3662,
+        longitude: 73.7558,
     },
     {
         id: 4,
@@ -37,6 +43,8 @@ export const forts = [
         height: 1404,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80',
+        latitude: 18.2768,
+        longitude: 73.6223,
     },
     {
         id: 5,
@@ -46,6 +54,8 @@ export const forts = [
         height: 1376,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=80',
+        latitude: 18.2467,
+        longitude: 73.6831,
     },
     {
         id: 6,
@@ -55,6 +65,8 @@ export const forts = [
         height: 1033,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=600&q=80',
+        latitude: 18.7083,
+        longitude: 73.4755,
     },
     {
         id: 7,
@@ -64,6 +76,8 @@ export const forts = [
         height: 1084,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=600&q=80',
+        latitude: 18.7150,
+        longitude: 73.4683,
     },
     {
         id: 8,
@@ -73,6 +87,8 @@ export const forts = [
         height: 900,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=600&q=80',
+        latitude: 19.2048,
+        longitude: 73.8677,
     },
     {
         id: 9,
@@ -82,6 +98,8 @@ export const forts = [
         height: 977,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80',
+        latitude: 16.8121,
+        longitude: 74.1102,
     },
     {
         id: 10,
@@ -91,6 +109,8 @@ export const forts = [
         height: 0,
         best_time: 'October – May',
         image_url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+        latitude: 16.0461,
+        longitude: 73.4585,
     },
     {
         id: 11,
@@ -100,6 +120,8 @@ export const forts = [
         height: 0,
         best_time: 'October – May',
         image_url: 'https://images.unsplash.com/photo-1500534314220-2dc811f43e85?w=600&q=80',
+        latitude: 16.5634,
+        longitude: 73.3337,
     },
     {
         id: 12,
@@ -109,6 +131,8 @@ export const forts = [
         height: 0,
         best_time: 'October – May',
         image_url: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80',
+        latitude: 18.2939,
+        longitude: 72.9644,
     },
     {
         id: 13,
@@ -118,6 +142,8 @@ export const forts = [
         height: 1424,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&q=80',
+        latitude: 19.3892,
+        longitude: 73.7772,
     },
     {
         id: 14,
@@ -127,6 +153,8 @@ export const forts = [
         height: 914,
         best_time: 'June – March',
         image_url: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&q=80',
+        latitude: 18.8350,
+        longitude: 73.4003,
     },
     {
         id: 15,
@@ -136,6 +164,8 @@ export const forts = [
         height: 1066,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80',
+        latitude: 18.6564,
+        longitude: 73.4858,
     },
     {
         id: 16,
@@ -145,6 +175,8 @@ export const forts = [
         height: 620,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&q=80',
+        latitude: 18.3947,
+        longitude: 73.2536,
     },
     {
         id: 17,
@@ -154,6 +186,8 @@ export const forts = [
         height: 929,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1458668383970-8ddd3927deed?w=600&q=80',
+        latitude: 18.7556,
+        longitude: 73.4519,
     },
     {
         id: 18,
@@ -163,6 +197,8 @@ export const forts = [
         height: 1387,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&q=80',
+        latitude: 18.2788,
+        longitude: 73.9811,
     },
     {
         id: 19,
@@ -172,6 +208,8 @@ export const forts = [
         height: 183,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=600&q=80',
+        latitude: 19.9428,
+        longitude: 75.2128,
     },
     {
         id: 20,
@@ -181,6 +219,8 @@ export const forts = [
         height: 1057,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80',
+        latitude: 18.4375,
+        longitude: 73.4253,
     },
     {
         id: 21,
@@ -190,6 +230,8 @@ export const forts = [
         height: 1100,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=600&q=80',
+        latitude: 17.6111,
+        longitude: 73.9394,
     },
     {
         id: 22,
@@ -199,6 +241,8 @@ export const forts = [
         height: 1000,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1470770841497-7bae8a36e4d4?w=600&q=80',
+        latitude: 17.6719,
+        longitude: 73.9942,
     },
     {
         id: 23,
@@ -208,6 +252,8 @@ export const forts = [
         height: 1170,
         best_time: 'November – February',
         image_url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80',
+        latitude: 17.4308,
+        longitude: 73.6667,
     },
     {
         id: 24,
@@ -217,6 +263,8 @@ export const forts = [
         height: 445,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1518173946687-a24ed4e112cf?w=600&q=80',
+        latitude: 18.8847,
+        longitude: 73.1172,
     },
     {
         id: 25,
@@ -226,6 +274,8 @@ export const forts = [
         height: 1567,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1465056836900-8f1e940f1904?w=600&q=80',
+        latitude: 20.5594,
+        longitude: 73.8364,
     },
     {
         id: 26,
@@ -235,6 +285,8 @@ export const forts = [
         height: 1306,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?w=600&q=80',
+        latitude: 20.5544,
+        longitude: 73.8297,
     },
     {
         id: 27,
@@ -244,6 +296,8 @@ export const forts = [
         height: 1120,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1464278533981-50106e6176b1?w=600&q=80',
+        latitude: 19.8833,
+        longitude: 73.7833,
     },
     {
         id: 28,
@@ -253,6 +307,8 @@ export const forts = [
         height: 1297,
         best_time: 'October – February',
         image_url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&q=80',
+        latitude: 19.5089,
+        longitude: 73.6867,
     },
     {
         id: 29,
@@ -262,6 +318,8 @@ export const forts = [
         height: 1450,
         best_time: 'November – February',
         image_url: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600&q=80',
+        latitude: 19.3833,
+        longitude: 73.7667,
     },
     {
         id: 30,
@@ -271,6 +329,8 @@ export const forts = [
         height: 0,
         best_time: 'October – March',
         image_url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80',
+        latitude: 18.5319,
+        longitude: 72.9075,
     },
 ];
 
