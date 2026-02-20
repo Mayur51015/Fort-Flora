@@ -3,6 +3,16 @@ import { renderFooter } from '../components/footer.js';
 import { forts, flora, getDistricts, getFortName } from '../data/seed.js';
 import supabase from '../lib/supabase.js';
 import { getCurrentUser, signIn, signUp, signOut, isAdmin } from '../lib/auth.js';
+import { askGroq } from '../lib/groq.js';
+import { createChatBubble, createTypingIndicator } from '../components/chatBubble.js';
+
+const STARTER_QUESTIONS = [
+  'What is the history of Raigad Fort?',
+  'Which forts are best for monsoon trekking?',
+  'Tell me about medicinal plants near Sinhagad.',
+  'What are the top 5 forts for beginners?',
+  'Which sea forts can I visit in Maharashtra?',
+];
 
 export async function renderAdmin(app) {
   app.innerHTML = '';
@@ -238,6 +248,7 @@ async function renderAdminPanel(main, app, user) {
         <div class="admin-tabs">
           <button class="tab-btn active" data-tab="forts">🏰 Forts (${fortData.length})</button>
           <button class="tab-btn" data-tab="flora">🌿 Flora (${floraData.length})</button>
+          <button class="tab-btn" data-tab="adviser">🤖 AI Adviser</button>
         </div>
 
         <!-- Forts Tab -->
@@ -337,6 +348,34 @@ async function renderAdminPanel(main, app, user) {
             </form>
           </div>
           <div class="admin-list" id="floraList"></div>
+        </div>
+
+        <!-- AI Adviser Tab -->
+        <div class="tab-content" id="tab-adviser">
+          <div class="chat-section">
+            <div class="chat-container">
+              <div class="chat-messages" id="adminChatMessages">
+                <div class="chat-welcome">
+                  <div class="welcome-icon">🏰🌿</div>
+                  <h3>Welcome to Fort-Flora AI Adviser!</h3>
+                  <p>I can help you with fort history, trekking tips, flora information, and more.</p>
+                  <p class="chat-scope-note">📍 I specialize in Maharashtra only</p>
+                </div>
+                <div class="starter-questions" id="adminStarterQuestions">
+                  <p class="starter-label">Try asking:</p>
+                  ${STARTER_QUESTIONS.map(
+    (q) => `<button class="starter-btn" data-question="${q}">${q}</button>`
+  ).join('')}
+                </div>
+              </div>
+              <div class="chat-input-area">
+                <input type="text" id="adminChatInput" class="chat-input" placeholder="Ask about forts, flora, trekking..." />
+                <button id="adminChatSend" class="chat-send-btn" aria-label="Send message">
+                  <span>➤</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -551,6 +590,61 @@ async function renderAdminPanel(main, app, user) {
     } else {
       showToast('Cannot delete without Supabase connection', 'error');
     }
+  });
+
+  // ===== AI Adviser Chat =====
+  const chatMessages = main.querySelector('#adminChatMessages');
+  const chatInput = main.querySelector('#adminChatInput');
+  const chatSendBtn = main.querySelector('#adminChatSend');
+  const starterEl = main.querySelector('#adminStarterQuestions');
+
+  let isChatProcessing = false;
+  const conversationHistory = [];
+
+  async function sendChatMessage(text) {
+    if (!text.trim() || isChatProcessing) return;
+    isChatProcessing = true;
+
+    if (starterEl) starterEl.style.display = 'none';
+
+    chatMessages.appendChild(createChatBubble(text, true));
+
+    const typing = createTypingIndicator();
+    chatMessages.appendChild(typing);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    chatInput.value = '';
+    chatInput.disabled = true;
+    chatSendBtn.disabled = true;
+
+    const response = await askGroq(text, conversationHistory);
+
+    conversationHistory.push(
+      { role: 'user', content: text },
+      { role: 'assistant', content: response }
+    );
+
+    if (conversationHistory.length > 20) {
+      conversationHistory.splice(0, 2);
+    }
+
+    typing.remove();
+    chatMessages.appendChild(createChatBubble(response, false));
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    chatInput.disabled = false;
+    chatSendBtn.disabled = false;
+    chatInput.focus();
+    isChatProcessing = false;
+  }
+
+  chatSendBtn.addEventListener('click', () => sendChatMessage(chatInput.value));
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') sendChatMessage(chatInput.value);
+  });
+
+  chatMessages.querySelectorAll('.starter-btn').forEach((btn) => {
+    btn.addEventListener('click', () => sendChatMessage(btn.dataset.question));
   });
 }
 

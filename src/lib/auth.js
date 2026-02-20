@@ -117,8 +117,8 @@ export async function isBookmarked(userId, fortId) {
             .select('id')
             .eq('user_id', userId)
             .eq('fort_id', fortId)
-            .maybeSingle();
-        return !error && !!data;
+            .limit(1);
+        return !error && data && data.length > 0;
     } catch {
         return false;
     }
